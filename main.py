@@ -147,7 +147,23 @@ def print_hi(name):
         f_stat, p_value = stats.f_oneway(*groups)
         print(f"{feature}: F={f_stat:.4f}, p-valor={p_value:.8f}")
 
+        # 6. CONCLUSIONES
+        print("\n" + "=" * 50)
+        print("CONCLUSIONES DEL EDA")
+        print("=" * 50)
 
+        print("""
+        Principales hallazgos del análisis exploratorio:
+
+        1. El dataset contiene 150 muestras de flores Iris, equitativamente distribuidas entre 3 especies.
+        2. No hay valores nulos en el dataset.
+        3. Las características PetalLengthCm y PetalWidthCm muestran una mayor capacidad discriminativa entre especies.
+        4. Existe una fuerte correlación positiva entre la longitud y el ancho del pétalo.
+        5. Iris-setosa es claramente separable de las otras dos especies.
+        6. Iris-versicolor e Iris-virginica muestran cierto solapamiento en sus características.
+        7. El análisis ANOVA confirma que todas las características presentan diferencias estadísticamente significativas entre especies.
+        8. El dataset es adecuado para tareas de clasificación debido a la clara separación entre especies.
+        """)
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
