@@ -84,7 +84,29 @@ def print_hi(name):
     plt.savefig('./imagenes/boxplots_iris.png')
     plt.close()
 
+    # 3. ANÁLISIS BIVARIADO
+    print("\n" + "=" * 50)
+    print("ANÁLISIS BIVARIADO")
+    print("=" * 50)
 
+    # Matriz de correlación
+    corr_matrix = df_analysis.drop('Species', axis=1).corr().round(2)
+    print("\nMatriz de correlación:")
+    print(corr_matrix)
+
+    # Visualizar matriz de correlación
+    plt.figure(figsize=(10, 8))
+    sns.heatmap(corr_matrix, annot=True, cmap='coolwarm', linewidths=0.5)
+    plt.title('Matriz de Correlación de Variables')
+    plt.tight_layout()
+    plt.savefig('./imagenes/correlacion_iris.png')
+    plt.close()
+
+    # Scatter plots
+    sns.pairplot(df, hue='Species', markers=['o', 's', 'D'], height=2.5)
+    plt.suptitle('Scatter Plot Matrix para Variables del Dataset Iris', y=1.02)
+    plt.savefig('./imagenes/pairplot_iris.png')
+    plt.close()
 
 
 # Press the green button in the gutter to run the script.
