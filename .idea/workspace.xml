@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="891ad011-4ea7-40a7-8eed-aa2ee64ac58e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="891ad011-4ea7-40a7-8eed-aa2ee64ac58e" name="Changes" comment="feat(backend): add bivariate analysis">
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,8 +71,25 @@
       <option name="presentableId" value="Default" />
       <updated>1747324022530</updated>
       <workItem from="1747324023609" duration="28000" />
-      <workItem from="1747324796479" duration="2537000" />
+      <workItem from="1747324796479" duration="2891000" />
     </task>
+    <task id="LOCAL-00001" summary="feat(backend): add univariate analysis">
+      <option name="closed" value="true" />
+      <created>1747327415384</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1747327415384</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat(backend): add bivariate analysis">
+      <option name="closed" value="true" />
+      <created>1747327560528</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1747327560528</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -101,6 +117,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat(backend): add univariate analysis" />
+    <MESSAGE value="feat(backend): add bivariate analysis" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(backend): add bivariate analysis" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PythonProjectIris$main.coverage" NAME="main Coverage Results" MODIFIED="1747327260854" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

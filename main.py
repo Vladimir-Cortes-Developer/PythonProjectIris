@@ -108,6 +108,32 @@ def print_hi(name):
     plt.savefig('./imagenes/pairplot_iris.png')
     plt.close()
 
+    # 4. ANÁLISIS MULTIVARIADO
+    print("\n" + "=" * 50)
+    print("ANÁLISIS MULTIVARIADO")
+    print("=" * 50)
+
+    # Visualización 3D
+    from mpl_toolkits.mplot3d import Axes3D
+
+    fig = plt.figure(figsize=(12, 10))
+    ax = fig.add_subplot(111, projection='3d')
+
+    # Colores para cada especie
+    colors = {'Iris-setosa': 'red', 'Iris-versicolor': 'green', 'Iris-virginica': 'blue'}
+    markers = {'Iris-setosa': 'o', 'Iris-versicolor': '^', 'Iris-virginica': 's'}
+
+    for species, group in df.groupby('Species'):
+        ax.scatter(group['SepalLengthCm'], group['PetalLengthCm'], group['PetalWidthCm'],
+                   c=colors[species], marker=markers[species], s=60, label=species, alpha=0.7)
+
+    ax.set_xlabel('Longitud de Sépalo (cm)')
+    ax.set_ylabel('Longitud de Pétalo (cm)')
+    ax.set_zlabel('Ancho de Pétalo (cm)')
+    ax.set_title('Visualización 3D de Características del Iris')
+    ax.legend()
+    plt.savefig('./imagenes/3d_scatter_iris.png')
+    plt.close()
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
