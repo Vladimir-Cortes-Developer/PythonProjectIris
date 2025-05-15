@@ -47,6 +47,46 @@ def print_hi(name):
     print("\nDistribución de especies:")
     print(df['Species'].value_counts())
 
+    # 2. ANÁLISIS UNIVARIADO
+    print("\n" + "=" * 50)
+    print("ANÁLISIS UNIVARIADO")
+    print("=" * 50)
+
+    # Eliminar la columna ID para análisis (si es solo un índice)
+    df_analysis = df.drop('Id', axis=1)
+
+    # Histogramas de las variables numéricas
+    fig, axes = plt.subplots(2, 2, figsize=(14, 10))
+    axes = axes.flatten()
+
+    numeric_cols = ['SepalLengthCm', 'SepalWidthCm', 'PetalLengthCm', 'PetalWidthCm']
+    for i, col in enumerate(numeric_cols):
+        sns.histplot(data=df, x=col, hue='Species', kde=True, ax=axes[i])
+        axes[i].set_title(f'Distribución de {col} por Especie')
+        axes[i].set_xlabel(col)
+        axes[i].set_ylabel('Frecuencia')
+
+    plt.tight_layout()
+    plt.savefig('./imagenes/histogramas_iris.png')
+    plt.close()
+
+    # Boxplots para detectar outliers
+    fig, axes = plt.subplots(2, 2, figsize=(14, 10))
+    axes = axes.flatten()
+
+    for i, col in enumerate(numeric_cols):
+        sns.boxplot(x='Species', y=col, data=df, ax=axes[i])
+        axes[i].set_title(f'Boxplot de {col} por Especie')
+        axes[i].set_xlabel('Especie')
+        axes[i].set_ylabel(col)
+
+    plt.tight_layout()
+    plt.savefig('./imagenes/boxplots_iris.png')
+    plt.close()
+
+
+
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print_hi('EDA Iris')
