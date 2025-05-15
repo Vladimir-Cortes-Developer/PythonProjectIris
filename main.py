@@ -135,6 +135,20 @@ def print_hi(name):
     plt.savefig('./imagenes/3d_scatter_iris.png')
     plt.close()
 
+    # 5. ANÁLISIS ESTADÍSTICO
+    print("\n" + "=" * 50)
+    print("ANÁLISIS ESTADÍSTICO")
+    print("=" * 50)
+
+    # ANOVA para comparar medias entre especies
+    print("\nResultados de ANOVA para comparar características entre especies:")
+    for feature in numeric_cols:
+        groups = [df[df['Species'] == species][feature] for species in df['Species'].unique()]
+        f_stat, p_value = stats.f_oneway(*groups)
+        print(f"{feature}: F={f_stat:.4f}, p-valor={p_value:.8f}")
+
+
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print_hi('EDA Iris')
