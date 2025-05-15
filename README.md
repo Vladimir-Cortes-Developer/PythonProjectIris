@@ -71,5 +71,9 @@ El análisis revela que:
 * **pairplot_iris.png**: Matriz de dispersión entre todas las variables
 * **3d_scatter_iris.png**: Visualización tridimensional de la separación entre especies
 
+
+Puedes instalar todas las dependencias con:
+
+
 ```bash
 pip install -r requirements.txt
